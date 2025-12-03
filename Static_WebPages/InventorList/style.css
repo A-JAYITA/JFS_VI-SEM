@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Center entire layout */
+.page-container {
+    width: 650px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Heading */
+h6 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Dropdown */
+.dropdown-section {
+    margin-bottom: 40px;
+}
+
+select {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+/* Layout for result */
+.display-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Image container */
+.image-circle {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Image */
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Details box */
+.details-box {
+    width: 300px;
+    height: 150px;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: left;
+    white-space: pre-line;
+}
+
+/* Hover effect ONLY for James Gosling */
+.hover-effect:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 5px rgba(0, 140, 255, 0.8);
+}
