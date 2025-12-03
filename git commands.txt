@@ -1,0 +1,19 @@
+1.git init
+2.git add .
+3.git commit -m "Example java program"
+4.open github in browser
+5.create a repo name JFS VI SEM
+6.copy http link
+7.git remote add origin (link)
+----------------------------
+
+If you want to add any files in local repo or you can change the existing files in local repo
+1..git status
+2.git add .
+3.git commit -m "message"
+4.git push origin master
+------------------------
+
+If you want to retrieve all the data to your PC (CLONING)
+
+1.git clone (link)
