@@ -49,23 +49,23 @@ function showInventor() {
 
     if (select === "") {
         image.src = "";
-        details.innerText = "";
-        imageBox.style.borderRadius = "50%";
-        imageBox.classList.remove("hover-effect");
+        details.innerText = "Select an Inventor";
+        // Ensure style is reset if nothing is selected
+        imageBox.classList.remove("james-mode");
         return;
     }
 
+    // Set Image and Text
     image.src = data[select].img;
     details.innerText = data[select].text;
 
-    //  James Gosling → square + glow + hover
+    // --- LOGIC CHANGE HERE ---
     if (select === "james") {
-        imageBox.style.borderRadius = "0";
-        imageBox.classList.add("hover-effect");
+        // If James, add the class (Square + Blue Shadow)
+        imageBox.classList.add("james-mode");
     } 
-    // Others → circle only
     else {
-        imageBox.style.borderRadius = "50%";
-        imageBox.classList.remove("hover-effect");
+        // For everyone else, remove the class (Back to Circle + No Shadow)
+        imageBox.classList.remove("james-mode");
     }
 }
