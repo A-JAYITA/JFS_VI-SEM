@@ -1,6 +1,7 @@
 //Auto-calculate total fee
 let subjects = document.querySelectorAll(".subject");
 let totalBox = document.getElementById("total");
+let messageBox=document.getElementById("resultMessage");
 subjects.forEach(item => {
  item.addEventListener("change", () =>{
   let total = 0;
@@ -26,12 +27,16 @@ document.getElementById("regForm").addEventListener("submit", function(e){
   }
  });
  if(selectedSubjects.length === 0){
-  alert("Please select at least one subject");
+	messageBox.style.display="block";
+	messageBox.style.background="#ffe0e0";
+	messageBox.style.borderLeft="5px solid red";
+	messageBox.style.innerText="Please select at least one subject";
   return;
  }
  let studentName= document.getElementById("name").value;
  let message=
   "Student Name: " + studentName + "\n\n" + "Selected Subject: \n- " + selectedSubjects.join("\n-") + "\n\n" + 
   "Total Fee: " + totalFee;
- alert(message);
+messageBox.style.display="block";
+messageBox.innerText=message;
 });
